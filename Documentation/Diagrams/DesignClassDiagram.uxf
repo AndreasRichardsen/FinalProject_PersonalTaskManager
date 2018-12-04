@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>560</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+- id: int
+- userName: String
+- familyName: String
+- givenName: String
+- email: String
+--
+-&lt;&lt;Constructor&gt;&gt; Person
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1090</x>
+      <y>560</y>
+      <w>210</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Task
+--
+- id: int
+- taskName: String
+- taskInfo:String
+- parentTask: Task
+- subTasks: ArrayList&lt;Task&gt;
+- favourite: Bool
+- done: Bool
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>580</y>
+      <w>210</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>TaskList
+--
+- id: int
+- title: String
+- tasks: ArrayList&lt;Task&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>290</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>PersonController
+--
+- person: Person
+--
++ getPersonById(id: int): Person
++ getPersonByUserName(userName: String): Person
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>720</x>
+      <y>290</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>TaskListController
+--
+- taskList: TaskList
+--
+-&lt;&lt;Constructor&gt;&gt; Person
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>280</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>TaskController
+--
+- task: Task
+--
+-&lt;&lt;Constructor&gt;&gt; Person
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
