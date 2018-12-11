@@ -7,7 +7,7 @@
       <x>320</x>
       <y>220</y>
       <w>210</w>
-      <h>100</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Person
 --
@@ -16,7 +16,7 @@ userName
 familyName
 givenName
 email
-</panel_attributes>
+taskLists</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -25,13 +25,14 @@ email
       <x>1060</x>
       <y>220</y>
       <w>210</w>
-      <h>120</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>Task
 --
 id
 taskName
 taskInfo
+parentTaskId
 subTasks
 favourite
 done
@@ -46,7 +47,7 @@ done
       <x>690</x>
       <y>240</y>
       <w>210</w>
-      <h>70</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>List
 --

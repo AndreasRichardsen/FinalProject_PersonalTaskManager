@@ -4,10 +4,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>560</y>
-      <w>210</w>
-      <h>210</h>
+      <x>360</x>
+      <y>510</y>
+      <w>260</w>
+      <h>340</h>
     </coordinates>
     <panel_attributes>Person
 --
@@ -16,39 +16,64 @@
 - familyName: String
 - givenName: String
 - email: String
+- taskLists: ArrayList&lt;TaskList&gt;
 --
--&lt;&lt;Constructor&gt;&gt; Person
-</panel_attributes>
+- &lt;&lt;Constructor&gt;&gt; Person
++ getId(): int
++ getUserName(): String
++ getFamilyName(): String
++ getGivenName(): String
++ getEmail(): String
++ getTaskLists(): ArrayList&lt;TaskList&gt;
++ setUserName(name: String)
++ setFamilyName(name: String)
++ setGivenName(name: String)
++ setEmail(email: String)
++ addTaskList(taskList: TaskList)
++ removeTaskList(taskList: TaskList)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1090</x>
-      <y>560</y>
-      <w>210</w>
-      <h>240</h>
+      <x>1060</x>
+      <y>510</y>
+      <w>280</w>
+      <h>400</h>
     </coordinates>
     <panel_attributes>Task
 --
 - id: int
 - taskName: String
 - taskInfo:String
-- parentTask: Task
+- parentTaskId: int
 - subTasks: ArrayList&lt;Task&gt;
 - favourite: Bool
 - done: Bool
 --
-
-</panel_attributes>
+- &lt;&lt;Constructor&gt;&gt; Task
++ getID(): int
++ getTaskName(): String
++ getTaskInfo(): String
++ getParentTaskId(): int
++ getSubTasks(): ArrayList&lt;Task&gt;
++ getFavourite(): bool
++ getDone(): bool
++ setTaskName(name: String)
++ setTaskInfo(info: String)
++ setParentTaskId(parentid: int)
++ setFavourite(favourite: bool)
++ setDone(done: bool)
++ addSubTaskToList(subTask: Task)
++ removeSubTaskFromList(subTask: Task)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
-      <y>580</y>
-      <w>210</w>
+      <x>750</x>
+      <y>510</y>
+      <w>230</w>
       <h>220</h>
     </coordinates>
     <panel_attributes>TaskList
@@ -56,56 +81,152 @@
 - id: int
 - title: String
 - tasks: ArrayList&lt;Task&gt;
---</panel_attributes>
+--
+- &lt;&lt;Constructor&gt;&gt; TaskList
++ getId(): int
++ getTitle(): string
++ getTasks(): ArrayList&lt;Task&gt;
++ setTitle(title: string)
++ addTaskToList(task: Task)
++ removeTaskFromList(task: Task)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>290</y>
-      <w>210</w>
+      <x>320</x>
+      <y>240</y>
+      <w>350</w>
       <h>210</h>
     </coordinates>
     <panel_attributes>PersonController
 --
 - person: Person
 --
++ createPerson(userName: String...): Person
 + getPersonById(id: int): Person
-+ getPersonByUserName(userName: String): Person
-</panel_attributes>
++ updatePersonById(id: int): Person
++ deletePersonById(id: int)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
-      <y>290</y>
-      <w>210</w>
+      <x>740</x>
+      <y>240</y>
+      <w>250</w>
       <h>210</h>
     </coordinates>
     <panel_attributes>TaskListController
 --
 - taskList: TaskList
 --
--&lt;&lt;Constructor&gt;&gt; Person
++ createList(title: String): TaskList
++ getListById(id: int): TaskList
++ updateTaskListById(id: int): TaskList
++ deleteListById(id: int)
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1080</x>
-      <y>280</y>
-      <w>210</w>
+      <x>1060</x>
+      <y>240</y>
+      <w>270</w>
       <h>210</h>
     </coordinates>
     <panel_attributes>TaskController
 --
 - task: Task
 --
--&lt;&lt;Constructor&gt;&gt; Person
++ createTask(taskName: String...): Task
++ getTaskById(id: int): Task
++ updateTaskById(id: int): Task
++ deleteTaskById(id:int)
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>440</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>440</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1190</x>
+      <y>440</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>70</y>
+      <w>240</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>UI
+--
+
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>130</y>
+      <w>30</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>120</y>
+      <w>280</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>980</x>
+      <y>120</y>
+      <w>230</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>210.0;120.0;210.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
