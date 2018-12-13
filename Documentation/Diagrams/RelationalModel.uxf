@@ -227,13 +227,13 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>210</x>
+      <x>240</x>
       <y>500</y>
-      <w>340</w>
+      <w>310</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;320.0;40.0;320.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;290.0;40.0;290.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
@@ -302,5 +302,49 @@ bg=yellow</panel_attributes>
     </coordinates>
     <panel_attributes>_taskId_</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>500</y>
+      <w>100</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;70.0;60.0;10.0;60.0;10.0;170.0;80.0;170.0;80.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>500</y>
+      <w>230</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;210.0;60.0;210.0;170.0;120.0;170.0;120.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>500</y>
+      <w>230</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;210.0;50.0;210.0;300.0;110.0;300.0;110.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>100</x>
+      <y>360</y>
+      <w>120</w>
+      <h>460</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;90.0;60.0;10.0;60.0;10.0;440.0;100.0;440.0;100.0;420.0</additional_attributes>
   </element>
 </diagram>
