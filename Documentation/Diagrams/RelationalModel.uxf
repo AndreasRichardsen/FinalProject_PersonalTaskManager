@@ -139,17 +139,6 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
-      <y>480</y>
-      <w>100</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>tParentTaskId</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
       <x>380</x>
       <y>480</y>
       <w>100</w>
@@ -161,7 +150,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>580</x>
+      <x>480</x>
       <y>480</y>
       <w>120</w>
       <h>30</h>
@@ -172,7 +161,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>700</x>
+      <x>600</x>
       <y>480</y>
       <w>120</w>
       <h>30</h>
@@ -183,7 +172,7 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>820</x>
+      <x>720</x>
       <y>480</y>
       <w>120</w>
       <h>30</h>
@@ -196,11 +185,11 @@ bg=yellow</panel_attributes>
     <coordinates>
       <x>240</x>
       <y>360</y>
-      <w>660</w>
+      <w>560</w>
       <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;640.0;40.0;640.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;540.0;40.0;540.0;120.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -223,17 +212,6 @@ bg=yellow</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0;200.0;40.0;200.0;120.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>240</x>
-      <y>500</y>
-      <w>310</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;290.0;40.0;290.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
