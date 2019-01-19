@@ -18,22 +18,40 @@ namespace TaskManager.Controllers
         private TaskManagerContext db = new TaskManagerContext();
 
         // GET: api/Tasks
-        public IQueryable<ATask> GetATasks()
+        public IQueryable<TaskDTO> GetATasks()
         {
-            return db.ATasks;
+            var tasks = from t in db.ATasks
+                        select new TaskDTO()
+                        {
+                            Id = t.Id,
+                            TaskName = t.TaskName,
+                            Category = t.Category,
+                        };
+            return tasks;
         }
 
         // GET: api/Tasks/5
-        [ResponseType(typeof(ATask))]
+        [ResponseType(typeof(TaskDetailDTO))]
         public async Task<IHttpActionResult> GetATask(int id)
         {
-            ATask aTask = await db.ATasks.FindAsync(id);
-            if (aTask == null)
+            var task = await db.ATasks.Include(t => t.SubTasks).Select(t =>
+            new TaskDetailDTO()
+            {
+                Id = t.Id,
+                TaskName = t.TaskName,
+                TaskInfo = t.TaskInfo,
+                Category = t.Category,
+                Favourite = t.Favourite,
+                Done = t.Done,
+                SubTasks = t.SubTasks.Select(st => st.Id).ToList()
+            }).SingleOrDefaultAsync(t => t.Id == id);
+
+            if (task == null)
             {
                 return NotFound();
             }
 
-            return Ok(aTask);
+            return Ok(task);
         }
 
         // PUT: api/Tasks/5
@@ -72,7 +90,7 @@ namespace TaskManager.Controllers
         }
 
         // POST: api/Tasks
-        [ResponseType(typeof(ATask))]
+        [ResponseType(typeof(TaskDTO))]
         public async Task<IHttpActionResult> PostATask(ATask aTask)
         {
             if (!ModelState.IsValid)
@@ -83,14 +101,23 @@ namespace TaskManager.Controllers
             db.ATasks.Add(aTask);
             await db.SaveChangesAsync();
 
+            //db.Entry(aTask).Reference(x => x.SubTasks).Load();
+
+            var sto = new TaskDTO()
+            {
+                Id = aTask.Id,
+                TaskName = aTask.TaskName,
+                Category = aTask.Category,
+            };
+
             return CreatedAtRoute("DefaultApi", new { id = aTask.Id }, aTask);
         }
 
         // DELETE: api/Tasks/5
-        [ResponseType(typeof(ATask))]
+        [ResponseType(typeof(TaskDetailDTO))]
         public async Task<IHttpActionResult> DeleteATask(int id)
         {
-            ATask aTask = await db.ATasks.FindAsync(id);
+            var aTask = await db.ATasks.FindAsync(id);
             if (aTask == null)
             {
                 return NotFound();

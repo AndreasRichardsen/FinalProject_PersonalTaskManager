@@ -237,15 +237,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201901111755415_initial.cs" />
-    <Compile Include="Migrations\201901111755415_initial.Designer.cs">
-      <DependentUpon>201901111755415_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201901191102045_Initial.cs" />
+    <Compile Include="Migrations\201901191102045_Initial.Designer.cs">
+      <DependentUpon>201901191102045_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ATask.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\PersonDetailDTO.cs" />
+    <Compile Include="Models\PersonDTO.cs" />
+    <Compile Include="Models\TaskDetailDTO.cs" />
+    <Compile Include="Models\TaskDTO.cs" />
     <Compile Include="Models\TaskManagerContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -344,8 +348,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901111755415_initial.resx">
-      <DependentUpon>201901111755415_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901191102045_Initial.resx">
+      <DependentUpon>201901191102045_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
