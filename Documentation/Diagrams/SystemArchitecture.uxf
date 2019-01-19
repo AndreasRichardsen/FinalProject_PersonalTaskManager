@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>17</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>969</x>
+      <y>561</y>
+      <w>238</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>Database Server
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1020</x>
+      <y>680</y>
+      <w>136</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>customelement=
+// Text Elemnt
+// DB Symbol
+drawArc(0,0,width,height*2/5,0,180,true) fg=black bg=#222222 //Parameters (x, y, width, height, start, extent, open)
+drawArc(0,0,width,height*2/5,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawRectangle(0,(height+0.5)/5,width,(height)*3/5-1) fg=#929292 bg=#222222 //Parameters (x, y, width, height)
+drawLine(0,height/5,0,height*4/5)fg=black //Parameters (x1, y1, x2, y2) 
+drawLine(width,height/5,width,height*4/5)fg=black //Parameters (x1, y1, x2, y2) 
+drawArc(0,height*1/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawArc(0,height*2/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y, width, height, start, extent, open)
+drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black bg=#222222 //Parameters (x, y, width, height, start, extent, open)
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1071</x>
+      <y>595</y>
+      <w>51</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=-
+group=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>391</x>
+      <y>340</y>
+      <w>850</w>
+      <h>510</h>
+    </coordinates>
+    <panel_attributes>
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>884</x>
+      <y>493</y>
+      <w>51</w>
+      <h>391</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>884</x>
+      <y>493</y>
+      <w>391</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>969</x>
+      <y>561</y>
+      <w>238</w>
+      <h>255</h>
+    </coordinates>
+    <panel_attributes>
+
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>748</x>
+      <y>697</y>
+      <w>255</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>493</x>
+      <y>680</y>
+      <w>272</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>ORM
+(Entity Framework)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>493</x>
+      <y>527</y>
+      <w>272</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>ASP.NET Web API</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>561</y>
+      <w>51</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>493</x>
+      <y>374</y>
+      <w>272</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>Host</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>408</y>
+      <w>51</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1615</x>
+      <y>408</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>
+bg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1649</x>
+      <y>442</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1666</x>
+      <y>374</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1768</x>
+      <y>391</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1751</x>
+      <y>442</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>442</x>
+      <y>187</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>type=initial
+group=2
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>493</x>
+      <y>153</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>type=initial
+group=2
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>510</x>
+      <y>221</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>type=initial
+group=2
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>578</x>
+      <y>170</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>type=initial
+group=2
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>578</x>
+      <y>204</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>type=initial
+group=2
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>255</y>
+      <w>51</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>884</x>
+      <y>136</y>
+      <w>272</w>
+      <h>51</h>
+    </coordinates>
+    <panel_attributes>Browser Client</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>153</y>
+      <w>204</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>527</x>
+      <y>187</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>type=initial
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>527</x>
+      <y>204</y>
+      <w>187</w>
+      <h>68</h>
+    </coordinates>
+    <panel_attributes>INTERNET
+
+bg=black
+f</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
