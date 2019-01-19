@@ -20,9 +20,27 @@ namespace TaskManager.Models
             this.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
         }
 
+        public DbSet<Person> People { get; set; }
+
         public DbSet<ATask> ATasks { get; set; }
 
-        public DbSet<Person> People { get; set; }
+
+        /**
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Person>()
+                .HasOptional(p => p.Tasks)
+                .WithMany()
+                .WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<ATask>()
+                .HasOptional(t => t.SubTasks)
+                .WithMany()
+                .WillCascadeOnDelete(true);
+
+            base.OnModelCreating(modelBuilder);
+        }
+        **/
 
     }
 }

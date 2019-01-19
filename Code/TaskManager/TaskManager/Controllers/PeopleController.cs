@@ -10,24 +10,44 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using TaskManager.Models;
+using TaskManager.Controllers;
 
 namespace TaskManager.Controllers
 {
     public class PeopleController : ApiController
     {
+        //LINQ: Specify the data source
         private TaskManagerContext db = new TaskManagerContext();
 
         // GET: api/People
-        public IQueryable<Person> GetPeople()
+        public IQueryable<PersonDTO> GetPeople()
         {
-            return db.People;
+            //LINQ: Define the query expression
+            var people = from p in db.People
+                         select new PersonDTO()
+                         {
+                             Id = p.Id,
+                             UserName = p.UserName
+                         };
+            //LINQ: Execute the query
+            return people;
         }
 
         // GET: api/People/5
-        [ResponseType(typeof(Person))]
+        [ResponseType(typeof(PersonDetailDTO))]
         public async Task<IHttpActionResult> GetPerson(int id)
         {
-            Person person = await db.People.FindAsync(id);
+            var person = await db.People.Include(p => p.Tasks).Select(p =>
+            new PersonDetailDTO()
+            {
+                Id = p.Id,
+                UserName = p.UserName,
+                FamilyName = p.FamilyName,
+                GivenName = p.GivenName,
+                Email = p.Email,
+                Tasks = p.Tasks.Select(t => t.Id).ToList()
+            }).SingleOrDefaultAsync(p => p.Id == id);
+
             if (person == null)
             {
                 return NotFound();
@@ -38,7 +58,7 @@ namespace TaskManager.Controllers
 
         // PUT: api/People/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutPerson(int id, Person person)
+        public async Task<IHttpActionResult> PutPerson(int id, PersonDetailDTO person)
         {
             if (!ModelState.IsValid)
             {
@@ -72,7 +92,7 @@ namespace TaskManager.Controllers
         }
 
         // POST: api/People
-        [ResponseType(typeof(Person))]
+        [ResponseType(typeof(PersonDTO))]
         public async Task<IHttpActionResult> PostPerson(Person person)
         {
             if (!ModelState.IsValid)
@@ -83,14 +103,22 @@ namespace TaskManager.Controllers
             db.People.Add(person);
             await db.SaveChangesAsync();
 
+            //db.Entry(person).Reference(x => x.Tasks).Load();
+
+            var sto = new PersonDTO()
+            {
+                Id = person.Id,
+                UserName = person.UserName
+            };
+
             return CreatedAtRoute("DefaultApi", new { id = person.Id }, person);
         }
 
         // DELETE: api/People/5
-        [ResponseType(typeof(Person))]
+        [ResponseType(typeof(PersonDetailDTO))]
         public async Task<IHttpActionResult> DeletePerson(int id)
         {
-            Person person = await db.People.FindAsync(id);
+            var person = await db.People.FindAsync(id);
             if (person == null)
             {
                 return NotFound();
