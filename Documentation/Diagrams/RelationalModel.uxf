@@ -72,11 +72,11 @@ bg=yellow</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>150</x>
-      <y>290</y>
+      <y>340</y>
       <w>140</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Lists
+    <panel_attributes>ATasks
 bg=yellow</panel_attributes>
     <additional_attributes/>
   </element>
@@ -84,41 +84,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>270</x>
-      <y>340</y>
-      <w>110</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lTitle</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>150</x>
-      <y>340</y>
-      <w>120</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>_lId_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>150</x>
-      <y>430</y>
-      <w>140</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Tasks
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>270</x>
-      <y>480</y>
+      <y>390</y>
       <w>110</w>
       <h>30</h>
     </coordinates>
@@ -129,7 +95,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>150</x>
-      <y>480</y>
+      <y>390</y>
       <w>120</w>
       <h>30</h>
     </coordinates>
@@ -140,7 +106,7 @@ bg=yellow</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>380</x>
-      <y>480</y>
+      <y>390</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -150,8 +116,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
-      <y>480</y>
+      <x>580</x>
+      <y>390</y>
       <w>120</w>
       <h>30</h>
     </coordinates>
@@ -161,8 +127,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>480</y>
+      <x>700</x>
+      <y>390</y>
       <w>120</w>
       <h>30</h>
     </coordinates>
@@ -172,31 +138,9 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>720</x>
-      <y>480</y>
+      <x>820</x>
+      <y>390</y>
       <w>120</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>listId</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>240</x>
-      <y>360</y>
-      <w>560</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;540.0;40.0;540.0;120.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>380</x>
-      <y>340</y>
-      <w>100</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>personId</panel_attributes>
@@ -207,122 +151,43 @@ bg=yellow</panel_attributes>
     <coordinates>
       <x>230</x>
       <y>220</y>
-      <w>220</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0;200.0;40.0;200.0;120.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>150</x>
-      <y>580</y>
-      <w>140</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>SubTasks
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>150</x>
-      <y>630</y>
-      <w>120</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>_parentTaskId_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLNote</id>
-    <coordinates>
-      <x>150</x>
-      <y>700</y>
-      <w>140</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>TaskLists
-bg=yellow</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>150</x>
-      <y>750</y>
-      <w>120</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>_listId_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>270</x>
-      <y>630</y>
-      <w>120</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>_subTaskId_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>270</x>
-      <y>750</y>
-      <w>120</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>_taskId_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>120</x>
-      <y>500</y>
-      <w>100</w>
+      <w>790</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>70.0;10.0;70.0;60.0;10.0;60.0;10.0;170.0;80.0;170.0;80.0;160.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>200</x>
-      <y>500</y>
-      <w>230</w>
-      <h>190</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0;210.0;60.0;210.0;170.0;120.0;170.0;120.0;160.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;770.0;40.0;770.0;170.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>220</x>
-      <y>500</y>
-      <w>230</w>
-      <h>320</h>
+      <y>410</y>
+      <w>680</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0;210.0;50.0;210.0;300.0;110.0;300.0;110.0;280.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;660.0;50.0;660.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
+    <id>UMLClass</id>
     <coordinates>
-      <x>100</x>
-      <y>360</y>
-      <w>120</w>
-      <h>460</h>
+      <x>480</x>
+      <y>390</y>
+      <w>100</w>
+      <h>30</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>90.0;10.0;90.0;60.0;10.0;60.0;10.0;440.0;100.0;440.0;100.0;420.0</additional_attributes>
+    <panel_attributes>tCategory</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>940</x>
+      <y>390</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>taskId</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

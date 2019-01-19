@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>510</y>
+      <x>510</x>
+      <y>520</y>
       <w>260</w>
       <h>340</h>
     </coordinates>
@@ -36,8 +36,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1060</x>
-      <y>510</y>
+      <x>910</x>
+      <y>520</y>
       <w>280</w>
       <h>400</h>
     </coordinates>
@@ -46,7 +46,7 @@
 - id: int
 - taskName: String
 - taskInfo:String
-- parentTaskId: int
+- category: String
 - subTasks: ArrayList&lt;Task&gt;
 - favourite: Bool
 - done: Bool
@@ -55,46 +55,23 @@
 + getID(): int
 + getTaskName(): String
 + getTaskInfo(): String
-+ getParentTaskId(): int
++ getCategory(): String
 + getSubTasks(): ArrayList&lt;Task&gt;
 + getFavourite(): bool
 + getDone(): bool
 + setTaskName(name: String)
 + setTaskInfo(info: String)
-+ setParentTaskId(parentid: int)
++ setCategory(category: String)
 + setFavourite(favourite: bool)
 + setDone(done: bool)
-+ addSubTaskToList(subTask: Task)
-+ removeSubTaskFromList(subTask: Task)</panel_attributes>
++ addSubTaskToTask(subTask: Task)
++ removeSubTaskFromTask(subTask: Task)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>750</x>
-      <y>510</y>
-      <w>230</w>
-      <h>220</h>
-    </coordinates>
-    <panel_attributes>TaskList
---
-- id: int
-- title: String
-- tasks: ArrayList&lt;Task&gt;
---
-- &lt;&lt;Constructor&gt;&gt; TaskList
-+ getId(): int
-+ getTitle(): string
-+ getTasks(): ArrayList&lt;Task&gt;
-+ setTitle(title: string)
-+ addTaskToList(task: Task)
-+ removeTaskFromList(task: Task)</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>320</x>
+      <x>470</x>
       <y>240</y>
       <w>350</w>
       <h>210</h>
@@ -112,27 +89,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>740</x>
-      <y>240</y>
-      <w>250</w>
-      <h>210</h>
-    </coordinates>
-    <panel_attributes>TaskListController
---
-+ taskList: TaskList
---
-+ createList(title: String): TaskList
-+ getListById(id: int): TaskList
-+ updateTaskListById(id: int): TaskList
-+ deleteListById(id: int)
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1060</x>
-      <y>240</y>
+      <x>910</x>
+      <y>230</y>
       <w>270</w>
       <h>210</h>
     </coordinates>
@@ -150,35 +108,24 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
+      <x>630</x>
       <y>440</y>
       <w>30</w>
-      <h>90</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>860</x>
-      <y>440</y>
+      <x>1040</x>
+      <y>430</y>
       <w>30</w>
-      <h>90</h>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1190</x>
-      <y>440</y>
-      <w>30</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -199,34 +146,23 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>860</x>
-      <y>130</y>
-      <w>30</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>490</x>
+      <x>640</x>
       <y>120</y>
-      <w>280</w>
+      <w>130</w>
       <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;120.0;10.0;10.0;260.0;10.0</additional_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>980</x>
       <y>120</y>
-      <w>230</w>
-      <h>140</h>
+      <w>80</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>210.0;120.0;210.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>60.0;110.0;60.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
