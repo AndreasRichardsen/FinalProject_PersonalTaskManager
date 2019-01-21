@@ -5,6 +5,8 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using System.Web.Http.Cors;
+using System.Net.Http.Headers;
 
 namespace TaskManager
 {
@@ -16,7 +18,7 @@ namespace TaskManager
             // Configure Web API to use only bearer token authentication.
             //config.SuppressDefaultHostAuthentication();
             //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
-
+            config.EnableCors(new EnableCorsAttribute("http://localhost:4200", headers: "*", methods: "*"));
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -26,6 +28,7 @@ namespace TaskManager
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
         }
     }
 }

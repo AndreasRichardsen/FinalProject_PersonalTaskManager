@@ -10,7 +10,7 @@ namespace TaskManager.Models
 {
     public class ATask
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
         public string TaskName { get; set; }
         public string TaskInfo { get; set; }
         public string Category { get; set; }
